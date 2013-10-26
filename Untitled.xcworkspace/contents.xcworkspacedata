@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Lottery.xcodeproj">
+      location = "group:Lottery/SpeakLine/SpeakLine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Lottery/Lottery.xcodeproj">
    </FileRef>
 </Workspace>
