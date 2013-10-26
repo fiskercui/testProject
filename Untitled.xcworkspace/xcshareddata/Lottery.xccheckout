@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C628D88C-831F-493E-9A77-DC7EC7D3B83B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Lottery</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>12DF1EA1-19EF-4414-88D7-603D4CC28C06</key>
+		<string>ssh://github.com/fiskercui/testProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Lottery/Lottery.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>12DF1EA1-19EF-4414-88D7-603D4CC28C06</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/fiskercui/testProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>12DF1EA1-19EF-4414-88D7-603D4CC28C06</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>12DF1EA1-19EF-4414-88D7-603D4CC28C06</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Work</string>
+		</dict>
+	</array>
+</dict>
+</plist>
