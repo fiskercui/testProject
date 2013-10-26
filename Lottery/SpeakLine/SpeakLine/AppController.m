@@ -19,21 +19,6 @@
     [tableView scrollRowToVisible:defaultRow];
 }
 
-- (id)init
-{
-    self = [super init];
-    
-    speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
-
-    NSLog(@"init");
-    
-    return self;
-}
-//- (void)speechSynthesizer:(NSSpeechSynthesizer *)sender
-//        didFinishSpeaking:(BOOL)complete
-//{
-//    NSLog(@"complete = %d", complete);
-//}
 
 - (void)speechSynthesizer:(NSSpeechSynthesizer* )sender
         didFinishSpeaking:(BOOL)complete
@@ -41,6 +26,7 @@
     NSLog(@"complete = %d", (int)complete);
     
 }
+
 
 -(int) numberOfRowsInTableView : (NSTableView*) tv
 {
@@ -56,6 +42,33 @@
     return [dict objectForKey:NSVoiceName];
 }
 
+- (void)tableViewSelectionDidChange:(NSNotification *)notification
+{
+    int row = [tableView selectedRow];
+    if (row == -1)
+    {
+        return;
+    }
+    
+    NSString* selectedVoice = [voiceList objectAtIndex:row];
+    [speechSynth setVoice: selectedVoice];
+    NSLog(@"new voice = %@", selectedVoice);
+}
+
+- (id)init
+{
+    self = [super init];
+    
+    speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
+    
+    NSLog(@"init");
+    
+    voiceList = [NSSpeechSynthesizer availableVoices];
+
+
+    return self;
+}
+
 -(IBAction)sayIt:(id)sender
 {
     NSString* string = [textField stringValue];
@@ -67,8 +80,7 @@
     
     [speechSynth startSpeakingString:string];
     [speechSynth setDelegate:self];
-    
-    voiceList = [NSSpeechSynthesizer availableVoices];
+    [tableView setDelegate:self];
     
     NSLog(@"have started to say:%@", string);
     
